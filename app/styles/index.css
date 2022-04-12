@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Clash Display Bold";
+  src: url("/fonts/ClashDisplay-Bold.otf") format("OpenType");
+}
+@font-face {
+  font-family: "Clash Display Regular";
+  src: url("/fonts/ClashDisplay-Regular.otf") format("OpenType");
+}
+@font-face {
+  font-family: "Clash Display Medium";
+  src: url("/fonts/ClashDisplay-Medium.otf") format("OpenType");
+}
+@font-face {
+  font-family: "Tomato Grotesk SemiBold";
+  src: url("/fonts/TomatoGrotesk-SemiBold.otf") format("OpenType");
+}
+@font-face {
+  font-family: "Tomato Grotesk Light";
+  src: url("/fonts/TomatoGrotesk-Light.otf") format("OpenType");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+  position: relative;
+  overflow-y: scroll;
+  background: #ffffff;
+  font-family: "Inter", sans-serif;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.Toastify__toast {
+  border-radius: 16px !important;
+  position: relative;
+  min-height: 80px;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  padding: 8px;
+  box-shadow: 0 1px 10px 0 rgb(0 0 0 / 10%), 0 2px 15px 0 rgb(0 0 0 / 5%);
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  cursor: pointer;
+  direction: ltr;
+}

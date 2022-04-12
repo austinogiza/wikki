@@ -1,32 +1,32 @@
-export default function Index() {
+import React, { useEffect } from "react"
+import styled from "styled-components"
+import DoMore from "~/components/home/DoMore"
+import HomeBusiness from "~/components/home/HomeBusiness"
+import HomeHero from "~/components/home/HomeHero"
+import HomeWaiting from "~/components/home/HomeWaiting"
+import UseCases from "~/components/home/UseCases"
+import LayoutHead from "~/container/LayoutHead"
+import HomeStarted from "~/components/home/HomeStarted"
+import gsap from "gsap/dist/gsap"
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
+
+const Home = () => {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
+  }, [])
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <h1>Welcome to Remix</h1>
-      <ul>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/blog"
-            rel="noreferrer"
-          >
-            15m Quickstart Blog Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/jokes"
-            rel="noreferrer"
-          >
-            Deep Dive Jokes App Tutorial
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
-            Remix Docs
-          </a>
-        </li>
-      </ul>
-    </div>
-  );
+    <Body>
+      <LayoutHead title="" />
+      <HomeHero />
+      <HomeWaiting />
+
+      <UseCases />
+
+      <HomeBusiness />
+      <HomeStarted />
+      <DoMore />
+    </Body>
+  )
 }
+const Body = styled.div``
+export default Home
