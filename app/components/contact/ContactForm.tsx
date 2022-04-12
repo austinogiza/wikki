@@ -10,7 +10,9 @@ import axios from "axios"
 import { ContactURL } from "~/constants/Constant"
 import { toast } from "react-toastify"
 import SuccessLoading from "~/components/SuccessLoading"
-import { Form, Formik, FormikHelpers } from "formik"
+import { Form, Formik } from "formik"
+
+import type { FormikHelpers } from "formik"
 interface Values {
   email: string
   message: string
