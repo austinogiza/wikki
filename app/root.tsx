@@ -16,7 +16,8 @@ import DriverMessage from "~/components/DriverMessage"
 import Footer from "~/components/Footer"
 import NavCover from "~/components/navbar/NavCover"
 import BackToTop from "~/components/BackToTop"
-
+import { ToastContainer } from "react-toastify"
+import toast from "react-toastify/dist/ReactToastify.css"
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "Request a dispatch or pickup",
@@ -45,7 +46,7 @@ export const links: LinksFunction = () => {
   return [
     { rel: "stylesheet", href: nProgressStyles },
     { rel: "stylesheet", href: styles },
-    // { rel: "stylesheet", href: lococss },
+    { rel: "stylesheet", href: toast },
 
     {
       rel: "icon",
@@ -69,6 +70,17 @@ export default function App() {
         {typeof document === "undefined" ? "__STYLES__" : null}
       </head>
       <body>
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
         <NavCover />
         <BackToTop />
         <Outlet />

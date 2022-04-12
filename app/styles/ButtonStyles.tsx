@@ -90,7 +90,7 @@ export const TertiaryButton = styled.button`
   justify-content: center;
 `
 
-export const FormButton = styled(Link)`
+export const FormButton = styled.button`
   height: 56px;
   max-width: 450px;
   width: 100%;
