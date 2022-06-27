@@ -18,7 +18,10 @@ const NotFound = () => {
         <ContactHeader>
           <ContactTitle>Error:404</ContactTitle>
 
-          <NotFoundButton to="/">Go back Home</NotFoundButton>
+          <Link to="/">
+            {" "}
+            <NotFoundButton>Go back Home</NotFoundButton>
+          </Link>
 
           <ContactTitle>Error:404</ContactTitle>
         </ContactHeader>
